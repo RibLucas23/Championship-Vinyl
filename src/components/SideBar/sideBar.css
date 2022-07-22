@@ -1,0 +1,33 @@
+.sideBar {
+    margin-top: 8rem;
+    margin-left: 2rem;
+}
+
+.sideBar_Border {
+    border-bottom: 2px solid black;
+}
+
+
+
+.sideBar__Title {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 10px solid #565FB2;
+    justify-content: space-between;
+    z-index: 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.sideBar__Title h3 {
+    margin: 0;
+}
+
+
+
+.sideBar__discoImg {
+    width: 130px;
+    margin-right: 25px;
+    z-index: 1;
+}
