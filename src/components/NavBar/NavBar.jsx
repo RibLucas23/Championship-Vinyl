@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './navBar.css'
 import Logo from '../../imgs/LOGO.png'
 import Disco from '../../imgs/DISCO2.png'
 import Buscador from './Buscador'
 import Carrito from './Carrito'
 import { Link } from 'react-router-dom'
+import { Context } from '../Context/ContextProvider';
 
 export default function NavBar() {
+    let { totalDeProductos } = useContext(Context);
     return (
         <nav className='nav'>
             <div className='navArribaTodo'>
@@ -34,11 +36,15 @@ export default function NavBar() {
                 </div>
                 {/* Carrito */}
                 <div className='navCarrito'>
-                    <Carrito />
+                    <Link to='/cart' className='link'>
+                        <Carrito total={totalDeProductos} />
+                    </Link>
                 </div>
             </div>
             <div className='navAbajo'>
-                <img className='navLogo' src={Logo} alt="" />
+                <Link to='/'>
+                    <img className='navLogo' src={Logo} alt="" />
+                </Link>
             </div>
         </nav>
     )

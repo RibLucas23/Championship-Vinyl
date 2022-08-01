@@ -1,0 +1,157 @@
+.carritoEntero {
+    display: flex;
+    margin-top: 5%;
+}
+
+.imagenCarrito {
+    width: 200px;
+}
+
+.itemsCarritoCompleto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.itemCarrito {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    height: 220px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.itemCarritoTitulo {
+    display: block;
+    text-align: center;
+}
+
+
+.terminarCompra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.terminarCompraBoton {
+    display: flex;
+    margin: auto !important;
+    justify-content: center;
+}
+
+.terminarCompraBoton button {
+    margin-top: 20px;
+
+}
+
+.paperCarrito {
+    height: 250px;
+    display: flex;
+
+}
+
+.botoneraCarrito {
+    margin: 10%;
+}
+
+.botonesCarrito {
+    display: flex;
+    justify-content: center;
+}
+
+.btnCarritoInicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnCarritoInicio button {
+    margin: 4rem;
+}
+
+.itemCarrito button {
+    margin-right: 10px;
+}
+
+.itemCarritoDiv {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .itemsCarritoCompleto {
+        flex-direction: column;
+    }
+
+    .carritoEntero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .itemCarrito {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        min-width: 336px;
+        max-width: 336px;
+
+    }
+
+    .imagenCarrito {
+        width: 150px;
+    }
+
+    .itemCarritoDiv {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .itemCarritoTitulo {
+        margin: 0%;
+    }
+
+    .paperCarrito {
+        min-width: 368px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 756px) {
+    .terminarCompra {
+        text-align: center;
+    }
+
+    .terminarCompra h1 {
+        margin-bottom: 0;
+    }
+
+    .terminarCompra h2 {
+        font-size: 1.2rem;
+        margin: 25px;
+    }
+
+    .terminarCompra__formulario {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+/*----------------------------------------------------------------------------- MODAL  */
+
+
+
+
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2dbdb;
+
+}

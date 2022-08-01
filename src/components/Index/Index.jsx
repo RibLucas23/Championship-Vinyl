@@ -1,8 +1,17 @@
 import { Grid } from '@mui/material'
 import React from 'react'
 import SideBar from '../SideBar/SideBar'
-import ItemListContainer from '../Cards/ItemListContainer'
+import ItemListContainer from '../ItemList/ItemListContainer'
+import './home.css'
+import { Link, useParams } from 'react-router-dom'
 export default function Index() {
+
+    const { id } = useParams()
+    const [btnBlanco, setBtnBlanco] = React.useState(true)
+
+    const toggleClass = () => {
+        setBtnBlanco(!btnBlanco)
+    }
     return (
         <>
             <Grid container spacing={2}>
@@ -10,7 +19,51 @@ export default function Index() {
                     <SideBar />
 
                 </Grid>
-                <Grid item md={9}>
+                <Grid item md={9} className="index_grid_itemListContainer">
+
+                    <div className='titulos'>
+                        <div className='naranja'>
+                        </div>
+                        {(id === undefined) ? (
+                            <>
+                                <Link to='/'>
+                                    <button className="btn_negro ">
+                                        <h5>New</h5>
+                                    </button>
+                                </Link>
+                                <Link to='/Popular'>
+                                    <button className={btnBlanco ? ("btn_blanco ") : ("btn_negro")} onClick={toggleClass}>
+                                        <h5>Popular</h5>
+                                    </button>
+                                </Link>
+                            </>
+
+                        ) : (<>
+                            {(id === "Popular") ? (
+                                <>
+                                    <Link to='/'>
+                                        <button className={btnBlanco ? ("btn_negro ") : ("btn_blanco")} onClick={toggleClass}>
+                                            <h5>New</h5>
+                                        </button>
+                                    </Link>
+                                    <Link to='/Popular'>
+                                        <button className={btnBlanco ? ("btn_blanco ") : ("btn_negro")} onClick={toggleClass}>
+                                            <h5>Popular</h5>
+                                        </button>
+                                    </Link>
+                                </>
+                            ) : (
+                                <button className="btn_negro">
+                                    <h5>{id}</h5>
+                                </button>
+                            )}
+                        </>
+                        )
+
+
+                        }
+                    </div>
+
                     <ItemListContainer />
                 </Grid>
 
@@ -19,3 +72,25 @@ export default function Index() {
 
     )
 }
+
+
+// (id === '/Popular') ? (
+//     <>
+//         <Link to='/'>
+//             <button className={btnBlanco ? ("btn_negro ") : ("btn_blanco")} onClick={toggleClass}>
+//                 <h5>New</h5>
+//             </button>
+//         </Link>
+//         <Link to='/Popular'>
+//             <button className={btnBlanco ? ("btn_blanco ") : ("btn_negro")} onClick={toggleClass}>
+//                 <h5>Popular</h5>
+//             </button>
+//         </Link>
+//     </>
+
+
+// <>
+//                                 <button className="btn_negro">
+//                                     <h5>{id}</h5>
+//                                 </button>
+//                             </>
