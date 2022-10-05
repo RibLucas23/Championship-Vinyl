@@ -1,60 +1,19 @@
-.recuadro {
-    border: 1px solid #E6E6E6;
-    border-radius: 5px;
-    margin-top: 26px;
-    display: flex;
-    margin-right: 60px;
-    justify-content: space-between;
-}
-
 .itemCount {
-
+    border: 2px solid #56B280;
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    padding: 6px 24px;
 
 }
 
-.itemCount__btns {
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-    border: 1px solid #56B280;
-    background-color: #56B280;
-    border-radius: 8px;
-
-}
+.itemCount__btns {}
 
 .itemCount__btn {
-    color: white;
-
+    padding: 3px !important;
 }
 
-.itemCount__precio {
-    color: #56B280;
-    margin-right: 40px;
-}
+.itemCarrito_precio {}
 
-.itemCount__num {
-    padding: 10px;
-    background-color: white;
-    color: #56B280;
+.itemCount__num {}
 
-}
-
-.itemCount__comprar {
-    width: 100%;
-    display: flex;
-}
-
-.itemCount__comprar__btn {
-    background-color: #56B280;
-    border: 1px solid #56B280;
-    width: 100%;
-    margin-right: 60px;
-    margin-top: 13px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.itemCount__comprar {}

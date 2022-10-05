@@ -17,15 +17,21 @@ export default function ItemListContainer() {
     const { id } = useParams()
     const [itemsPopular, setItemsPopular] = useState([]);
     const [itemsGenero, setItemsGenero] = useState([]);
+    const [itemsNovedades, setItemsNovedades] = useState([]);
+
     useEffect(() => {
         setLoading(true)
+        // accedo a la db
         const db = getFirestore();
         const productosRef = query(collection(db, 'Discos'));
+
         getDocs(productosRef).then(res => {
             const itemsCompletos = res.docs.map(item => ({ id: item.id, ...item.data() }))
             // Cuando no hay ninguna id espesifica, se muestran todos los productos
             if (id === undefined) {
                 setItems(itemsCompletos)
+                setItemsPopular(itemsCompletos.filter(item => item.popular === true))
+                setItemsNovedades(itemsCompletos.filter(item => item.new === true))
                 // console.log(itemsCompletos)
             }
             // // Si hay una id espesifica, se muestra solo el/los productos espesifico
@@ -55,6 +61,7 @@ export default function ItemListContainer() {
 
     return (
         <>
+            {/* pantalla de carga mientras se reciben los productos de la db  */}
             {loading ? (
                 <div className='cargando'>
                     <Loading />
@@ -62,23 +69,74 @@ export default function ItemListContainer() {
                 </div>
             ) : (
 
-                <div >
-                    <Grid container spacing={1} className='itemListContainer'>
-                        {(id === undefined) ? (
-                            <ItemList productos={items} />
-                        ) : (id === "Popular") ? (
 
-                            <ItemList productos={itemsPopular} />
-                        ) : (<>
-                            {items.length > 0 ? (
 
-                                <ItemList productos={items} />
-                            ) : (<ItemList productos={itemsGenero} />)
-                            }
+                <div>
+                    <div className='itemListContainer' >
+                        <div className='bordeInferior bordeInferior_naranja'>
+                            <h5>Top 5</h5>
+                        </div>
+                    </div>
+                    <ItemList productos={items} />
 
-                        </>)}
-                    </Grid>
+                    <div className='itemListContainer' >
+                        <div className='bordeInferior_azul bordeInferior'>
+                            <h5>Novedades</h5>
+                        </div>
+                    </div>
+                    <ItemList productos={itemsNovedades} />
+
+                    <div className='itemListContainer' >
+                        <div className='bordeInferior_naranja bordeInferior'>
+                            <h5>Popular</h5>
+                        </div>
+                    </div>
+                    <ItemList productos={itemsPopular} />
+
+
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                // <div>
+                //                     <Grid container spacing={1} className='itemListContainer'>
+                //                         {(id === undefined) ? (
+                //                             <ItemList productos={items} />
+                //                         ) : (id === "Popular") ? (
+
+                //                             <ItemList productos={itemsPopular} />
+                //                         ) : (<>
+                //                             {items.length > 0 ? (
+
+                //                                 <ItemList productos={items} />
+                //                             ) : (<ItemList productos={itemsGenero} />)
+                //                             }
+
+                //                         </>)}
+                //                     </Grid>
+                //                 </div>
 
 
             )

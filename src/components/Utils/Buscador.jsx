@@ -1,5 +1,5 @@
 import React from 'react'
-import './navBar.css'
+import './Utils.css'
 import SearchIcon from '@mui/icons-material/Search';
 export default function Buscador() {
     return (

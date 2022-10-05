@@ -92,3 +92,25 @@
         opacity: 0;
     }
 }
+
+
+/* buscador  */
+.div_buscador {
+    display: flex;
+    margin: 16px;
+    justify-content: center;
+    position: relative;
+
+
+}
+
+.buscador {
+    width: 100%;
+    height: 40px;
+}
+
+.buscador_icon {
+    position: absolute;
+    right: 2%;
+    top: 25%;
+}

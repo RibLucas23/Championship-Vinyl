@@ -1,50 +1,98 @@
-.itemDetail {
-
-    padding-top: 50px !important;
-    padding-left: 20px !important;
+/* Tapa de disco y titulo */
+.itemDetail_top {
+    position: absolute;
+    z-index: 2;
+    top: 40px;
+    background-color: white;
+    box-shadow: 0px -5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px 40px 0px 0px;
+    width: 100%;
+    padding-top: 30px;
 }
 
-.item__img__box {
-    border: 1px solid #E6E6E6;
-
-    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px -1px 4px rgba(0, 0, 0, 0.25); */
+.itemDetail_top h2 {
+    margin: 8px;
 }
 
 .item__img {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
+
+.item__img img {
+    width: 80vw;
+}
+
+.item_precio {
+    color: #0A7A00;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    position: absolute;
+    bottom: 0;
+    right: 10vw;
+}
+
+/* Imagenes miniatura */
+
+.item_imgs {
+    height: 120px;
+    background-color: #D9D9D9;
+
+}
+
+/* INFO DISCO  */
 
 .itemDetailBox {
-    border: 1px solid #E6E6E6;
-    border-radius: 5px;
-    padding: 12px 24px;
-    margin-right: 60px;
-    text-transform: capitalize;
-
-}
-
-.itemDetailPrice {
-    margin-top: 26px;
+    background-color: #F0F0F0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 60px;
+    flex-direction: column;
+    padding: 13px;
 }
 
-.itemDetailPrice h2 {
-    color: #56B280;
+.itemDetailBox p {
+    margin: 3px 0;
 }
 
-.related {
-    margin-top: 35px;
+/* Tracklist */
+.itemDetail__tracklist {
     display: flex;
-    justify-content: flex-start;
-    margin-right: 50px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 27vh;
 }
 
-.related h5 {
-    margin: 8px;
-    font-weight: 600;
-    /* font-size: 16px; */
-    /* line-height: 19px; */
+.itemDetail__tracklist p {
+    width: 50%;
+
+}
+
+.oculto {
+    display: none;
+}
+
+.itemDetail_btns {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.itemDetail_btns_on {
+    background: #F0F0F0;
+    width: 50%;
+}
+
+.itemDetail_btns_off {
+    background-color: white;
+    width: 50%;
+
+}
+
+.itemDetail_addBtn {
+    background: #56B280;
+    border-radius: 4px;
+    width: 90%;
 }

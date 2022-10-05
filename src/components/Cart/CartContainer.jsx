@@ -13,50 +13,55 @@ export default function CartContainer() {
     return (
         <>
             {/* Si  hay productos mostra... */}
+
             {carrito.length > 0 ? (
                 <>
-                    <Container className='todoElCarrito' maxWidth='lg'>
-                        <Grid container spacing={3}>
-                            <div className='carritoEntero'>
+                    {/* Seguir comprando */}
+                    <div className='itemDetail_top'>
+                        <div className='seguirComprando'>
+                            <Link to='/'>
+                                Seguir comprando
+                            </Link>
+                        </div>
 
-                                {/* MAPEO EL CARRITO */}
-                                <Grid item xs={12} md={7} sm={2} >
-                                    <div className='itemsCarritoCompleto'>
-                                        {carrito.map(item => (
-                                            <Cart key={item.id} item={item}
-                                            />
-                                        ))}
-                                    </div>
-                                </Grid>
-                                {/* BOTONERA CARRITO*/}
-                                <Grid item xs={12} md={5} sm={2}>
-
-                                    <Paper className='paperCarrito' variant='outlined' >
-                                        <div className='botoneraCarrito'>
-                                            {/* total dinero */}
-                                            <div className='totalDinero'>
-                                                <h1>Total: $ {totalDeDinero} </h1>
-                                            </div>
-
-                                            <div className='botonesCarrito'>
-                                                {/* clear  */}
-                                                < Button variant="contained" color="error" onClick={() => { clear() }}>
-                                                    clear
-                                                </Button >
-                                                {/* terminar compra  */}
-                                                <Link to="/cart/finish" className='link'>
-                                                    < Button variant="contained" color="success">
-                                                        Terminar compra
-                                                    </Button >
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </Paper>
-                                </Grid>
+                        <div className='carritoEntero'>
+                            <div className='bordeTuCarro'>
+                                <h5 className='bordeTCNaranja'>Tu carro</h5>
                             </div>
-                        </Grid>
-                    </Container>
 
+
+
+                            {/* MAPEO EL CARRITO */}
+                            <div className='itemsCarritoCompleto'>
+                                {carrito.map(item => (
+                                    <Cart key={item.id} item={item}
+                                    />
+                                ))}
+                            </div>
+                            {/* BOTONERA CARRITO*/}
+
+                            <div className='botoneraCarrito'>
+                                {/* total dinero */}
+                                <div className='totalDinero'>
+                                    <h1>Total: $ {totalDeDinero} </h1>
+                                </div>
+
+                                <div className='botonesCarrito'>
+                                    {/* clear  */}
+                                    < Button variant="contained" color="error" onClick={() => { clear() }}>
+                                        clear
+                                    </Button >
+                                    {/* terminar compra  */}
+                                    <Link to="/cart/finish" className='link'>
+                                        < Button variant="contained" color="success">
+                                            Terminar compra
+                                        </Button >
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </>
             ) : (
                 <>

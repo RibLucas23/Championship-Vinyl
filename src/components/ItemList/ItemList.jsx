@@ -1,6 +1,7 @@
 import React from 'react'
 import Item from './Item'
-import { Grid } from '@mui/material'
+// import { Grid } from '@mui/material'
+
 
 import './itemList.css'
 
@@ -9,9 +10,15 @@ function ItemList({ productos }) {
     return (
         <>
 
+            <div className="itemList_wrapper">
+                {productos.map(producto => (
+                    <div key={producto.id} className="itemList_container">
+                        <Item item={producto} />
+                    </div>
+                ))}
+            </div>
 
-
-            {productos.map(producto => (
+            {/* {productos.map(producto => (
                 <div key={producto.id} className="grid_itemList">
                     <Grid container spacing={1}>
                         <Grid item md={3} >
@@ -21,7 +28,7 @@ function ItemList({ productos }) {
                 </div>
 
 
-            ))}
+            ))} */}
 
 
 

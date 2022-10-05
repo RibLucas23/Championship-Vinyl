@@ -1,0 +1,26 @@
+.footer {
+    background-color: #1D293F;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer__logo {
+    padding: 10px !important;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 290px;
+    margin: auto;
+}
+
+.footer__txts {
+    display: flex;
+    color: white;
+}
+
+.footer__txts ul {
+    list-style: none;
+    font-size: 20px;
+}

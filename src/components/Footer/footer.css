@@ -1,27 +1,11 @@
 .footer {
-    background-color: #1D293F;
-    width: 100%;
-    margin-top: 40px;
+    display: none
 }
 
-.footer__logo {
-    padding: 10px !important;
-    display: flex;
-    align-items: center;
-}
+.footer__logo {}
 
-.logo {
-    width: 386px;
-    margin: auto;
-    height: 190px;
-}
+.logo {}
 
-.footer__txts {
-    display: flex;
-    color: white;
-}
+.footer__txts {}
 
-.footer__txts ul {
-    list-style: none;
-    font-size: 20px;
-}
+.footer__txts ul {}

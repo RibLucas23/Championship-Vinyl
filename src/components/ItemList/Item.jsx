@@ -12,7 +12,7 @@ export default function Item({ item }) {
     // CREO LA CARTA PARA CADA PRODUCTO 
     return (
 
-        <Card className='card' elevation={10} key={item.id} sx={{ maxWidth: 450 }}>
+        <Card className='card' elevation={5} key={item.id} sx={{ maxWidth: 6000 }}>
 
             <Link to={"/item/" + item.id} className='link'>
 
@@ -24,12 +24,16 @@ export default function Item({ item }) {
                         className="card_img"
                     />
                     <CardContent className='item_div'>
-                        <Typography c gutterBottom variant="h5" component="div" >
+                        {/* card top */}
+
+                        <Typography c gutterBottom variant="h5" component="div" className='item_title' >
                             {item.nombreDisco}
                         </Typography>
-                        <div className='card_bottom'>
 
-                            <Typography c gutterBottom component="div">
+
+                        {/* card bottom */}
+                        <div className='card_bottom'>
+                            <Typography c gutterBottom component="div" className='item_artist'>
                                 {item.artista}
                             </Typography>
                             <span className='card_precio'>

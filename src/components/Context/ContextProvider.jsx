@@ -15,6 +15,8 @@ export default function ContextProvider({ children }) {
         if (indexProducto !== -1) {
             const newCarrito = [...carrito];
             newCarrito[indexProducto].cantProduc = newCarrito[indexProducto].cantProduc + item.cantProduc;
+            newCarrito[indexProducto].precioTotal = newCarrito[indexProducto].precio * newCarrito[indexProducto].cantProduc;
+
             setCarrito(newCarrito);
         } else {
             setCarrito([...carrito, item]);

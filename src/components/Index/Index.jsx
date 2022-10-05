@@ -4,70 +4,53 @@ import SideBar from '../SideBar/SideBar'
 import ItemListContainer from '../ItemList/ItemListContainer'
 import './home.css'
 import { Link, useParams } from 'react-router-dom'
+import Buscador from '../Utils/Buscador'
 export default function Index() {
 
-    const { id } = useParams()
-    const [btnBlanco, setBtnBlanco] = React.useState(true)
+    // const { id } = useParams()
+    // const [btnBlanco, setBtnBlanco] = React.useState(true)
 
-    const toggleClass = () => {
-        setBtnBlanco(!btnBlanco)
-    }
+    // const toggleClass = () => {
+    //     setBtnBlanco(!btnBlanco)
+    // }
     return (
         <>
-            <Grid container spacing={2}>
-                <Grid item md={3}>
-                    <SideBar />
+            <Buscador />
+            <main>
 
-                </Grid>
-                <Grid item md={9} className="index_grid_itemListContainer">
+                <div className='etiquetas'>
 
-                    <div className='titulos'>
-                        <div className='naranja'>
-                        </div>
-                        {(id === undefined) ? (
-                            <>
-                                <Link to='/'>
-                                    <button className="btn_negro ">
-                                        <h5>New</h5>
-                                    </button>
-                                </Link>
-                                <Link to='/Popular'>
-                                    <button className={btnBlanco ? ("btn_blanco ") : ("btn_negro")} onClick={toggleClass}>
-                                        <h5>Popular</h5>
-                                    </button>
-                                </Link>
-                            </>
-
-                        ) : (<>
-                            {(id === "Popular") ? (
-                                <>
-                                    <Link to='/'>
-                                        <button className={btnBlanco ? ("btn_negro ") : ("btn_blanco")} onClick={toggleClass}>
-                                            <h5>New</h5>
-                                        </button>
-                                    </Link>
-                                    <Link to='/Popular'>
-                                        <button className={btnBlanco ? ("btn_blanco ") : ("btn_negro")} onClick={toggleClass}>
-                                            <h5>Popular</h5>
-                                        </button>
-                                    </Link>
-                                </>
-                            ) : (
-                                <button className="btn_negro">
-                                    <h5>{id}</h5>
-                                </button>
-                            )}
-                        </>
-                        )
+                    {/* generos */}
+                    <Link to='/s'>
+                        <button className="etiquetas_secciones ">
+                            <p>Géneros</p>
+                        </button>
+                    </Link>
+                    {/* colecciones */}
+                    <Link to='/'>
+                        <button className="etiquetas_secciones ">
+                            <p>Colecciones</p>
+                        </button>
+                    </Link>
+                    {/* Recomendados */}
+                    <Link to='/'>
+                        <button className="etiquetas_secciones ">
+                            <p>Recomendados</p>
+                        </button>
+                    </Link>
+                    {/* Clásicos */}
+                    <Link to='/'>
+                        <button className="etiquetas_secciones ">
+                            <p>Clásicos</p>
+                        </button>
+                    </Link>
 
 
-                        }
-                    </div>
+                </div>
 
-                    <ItemListContainer />
-                </Grid>
+                <ItemListContainer />
 
-            </Grid>
+            </main>
         </>
 
     )

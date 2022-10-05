@@ -1,119 +1,49 @@
 .navArriba {
     display: flex;
-    justify-content: center;
-}
-
-.navArribaTodo {
-    display: flex;
-    justify-content: center;
-}
-
-.navArriba ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-
-}
-
-.navArriba ul li {
-    padding: 0px 1.5rem;
-    color: white;
+    height: 55px;
+    background-color: #8A8C41;
     position: relative;
-    margin: 0 2rem;
-
-}
-
-.navMenu {
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    box-shadow: 0px 4px 4px 0px #00000040;
+
 }
 
-.navBuscador {
-    margin-top: 5rem;
+/* logos  */
+.navDisco {
     position: absolute;
-    z-index: 1;
+    width: 190px;
+    height: 63px;
+    right: 23%;
+    top: 0;
+    z-index: 3;
 }
 
-.navCarrito {
-    z-index: 1;
-    display: flex;
-    text-align: center;
+.navLogo {
+    width: 100px;
+    right: 35%;
+    /* top: 0; */
     position: absolute;
-    background-color: #FF890B;
-    border-radius: 50%;
-    padding: 8px 8px 5px 8px;
-    right: 40px;
-    top: 8px;
-    /* padding-left: 15rem; */
-    margin-right: 26px;
+    z-index: 3;
 
 }
 
-.carrito {}
-
-.cart {
-    position: relative;
+/* menu */
+.navMenu {
+    display: none;
 }
 
-.cart_icon {
-    font-size: 2rem !important;
-}
-
-.cart__total {
-    position: absolute;
-    bottom: -12px;
-    right: -12px;
-    background-color: #ff0b0b;
+.navMenu_mvl_icon {
+    font-size: 44px !important;
     color: white;
-    border-radius: 50%;
-    padding: 4px 8px;
-    font-size: 12px;
-    font-weight: bold;
+    margin-left: 18px;
+}
+
+/* carrito  */
+.navCarrito {
+    margin-right: 33px;
 }
 
 .link {
     color: white;
-
-}
-
-.navDisco {
-    position: absolute;
-    width: 700px;
-    z-index: -0;
-}
-
-.navAbajo {
-    background-color: #1D293F;
-    height: 95px;
-    display: flex;
-    align-items: center;
-}
-
-.navLogo {
-    display: flex;
-    height: 100px;
-    margin-left: 25px;
-
-}
-
-.buscador {
-    width: 350px;
-    height: 40px;
-    padding-left: 50px;
-}
-
-.divBuscador {
-    position: relative;
-    width: 350px;
-    height: 40px;
-    display: flex;
-
-}
-
-.buscador_icon {
-    position: absolute;
-    top: 10px;
-    left: 10px;
 }
