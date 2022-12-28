@@ -3,17 +3,30 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+    color: rgba(0, 0, 0, 0.54) !important;
+    background-color: transparent !important;
 }
 
 .itemCount__btns {}
 
 .itemCount__btn {
     padding: 3px !important;
+    color: rgba(0, 0, 0, 0.54) !important;
+
 }
 
 .itemCarrito_precio {}
 
-.itemCount__num {}
+.itemCount__num {
+    color: black;
+}
 
-.itemCount__comprar {}
+/* ____________________________________________________________________*/
+/* ############################ Desktop ############################### */
+/* ____________________________________________________________________*/
+
+@media (min-width:1024px) {
+    .itemCount {
+        max-height: 50px;
+    }
+}

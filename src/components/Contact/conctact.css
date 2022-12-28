@@ -1,0 +1,42 @@
+.contact__container {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__input {
+    width: 80vw !important;
+}
+
+
+
+.contact__redes {
+    background-color: #F0F0F0;
+}
+
+.desktop {
+    display: none;
+}
+
+/* ____________________________________________________________________*/
+/* ############################ Desktop ############################### */
+/* ____________________________________________________________________*/
+
+@media (min-width:1024px) {
+    .desktop {
+        display: block;
+    }
+
+    .contact__wrapper {
+        display: flex;
+    }
+}

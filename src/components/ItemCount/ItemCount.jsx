@@ -1,27 +1,34 @@
+// React
 import React, { useState, useContext } from "react";
-import { Context } from "../Context/ContextProvider";
+// Material UI
 import { IconButton } from "@mui/material";
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
-import './itemCount.css'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+// Components
+// Context
+import { Context } from "../Context/ContextProvider";
+// CSS
+import './itemCount.css'
 
 
 
 export default function ItemCount({ onAdd, item, carrito }) {
-    let { addToCart } = useContext(Context)
+    let { addToCart, removeOneItem } = useContext(Context)
 
-    const [cantProduc, setCantProduc] = useState(0);
+    const [cantProduc, setCantProduc] = useState(item.item.cantProduc);
 
     const suma = () => {
         if (cantProduc < 100) {
             setCantProduc(cantProduc + 1)
-            console.log(item)
+            addToCart(item.item)
+            console.log(item.item.cantProduc)
         }
 
     }
     const resta = () => {
-        if (cantProduc > 0) {
+        if (cantProduc > 1) {
+            removeOneItem(item.item)
             setCantProduc(cantProduc - 1)
         }
 

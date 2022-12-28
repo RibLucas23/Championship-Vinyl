@@ -1,7 +1,13 @@
+// React
 import React from 'react'
-import './footer.css'
-import Logo from '../../imgs/LOGO.png'
+import { Link } from 'react-router-dom'
+// Material UI
 import { Grid } from '@mui/material'
+// Components
+import Logo from '../../imgs/LOGO.png'
+// Context
+// CSS
+import './footer.css'
 export default function Footer() {
     return (
         <footer className="footer">
@@ -13,24 +19,31 @@ export default function Footer() {
                     <Grid container spacing={3} className="footer__txts">
                         <Grid item md={3}>
                             <ul>
-                                <li> HOME </li>
-                                <li> Popular </li>
-                                <li> New </li>
+                                <Link to='/' className='link'>
+                                    <li> HOME </li>
+                                </Link>
+                                <Link to='/about' className='link'>
+                                    <li> ABOUT </li>
+                                </Link>
+                                <Link to='/contact' className='link'>
+                                    <li> CONTACT </li>
+                                </Link>
                             </ul>
                         </Grid>
-                        <Grid item md={3}>
+                        <Grid item md={6}>
                             <ul>
-                                <li> ABOUT </li>
-                                <li> Help </li>
+                                <li>
+                                    <div className='footer__txts__seccs'>
+                                        <p>Popular</p>
+                                        <p>Novedades</p>
+                                        <p>Colecciones</p>
+                                    </div>
+                                </li>
+                                <li> Ayuda </li>
+                                <li> Bucarelli 2340, C.A.B.A., Argentina </li>
                             </ul>
                         </Grid>
-                        <Grid item md={3}>
-                            <ul>
-                                <li> CONTACT US </li>
-                                <li> Map </li>
-                                <li> Social </li>
-                            </ul>
-                        </Grid>
+
                     </Grid>
                 </Grid>
             </Grid>

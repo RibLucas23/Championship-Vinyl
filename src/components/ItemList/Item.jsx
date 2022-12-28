@@ -1,11 +1,14 @@
+// React
 import React from 'react';
-import './itemList.css'
+import { Link } from 'react-router-dom';
+// Material UI
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import { Link } from 'react-router-dom';
+// CSS
+import './itemList.css'
 
 export default function Item({ item }) {
 
@@ -37,7 +40,9 @@ export default function Item({ item }) {
                                 {item.artista}
                             </Typography>
                             <span className='card_precio'>
-                                ${item.precio}
+                                <b>
+                                    ${item.precio}
+                                </b>
                             </span>
                         </div>
                     </CardContent>

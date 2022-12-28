@@ -1,7 +1,11 @@
+// React
 import React from 'react'
-import './sideBar.css'
-import Disco from '../../imgs/DISCO3.png'
 import { Link } from 'react-router-dom'
+// Components
+import Disco from '../../imgs/DISCO3.png'
+// CSS
+import './sideBar.css'
+
 export default function SideBar() {
     return (
         <>
@@ -28,7 +32,7 @@ export default function SideBar() {
                         <Link to='/genre/Rock' className='sideBar__links'>
                             <li>Rock</li>
                         </Link>
-                        <Link to='/genre/R&B' className='sideBar__links'>
+                        <Link to='/genre/Rhythm and blues' className='sideBar__links'>
                             <li>R&B</li>
                         </Link>
                         <Link to='/genre/Rap' className='sideBar__links'>

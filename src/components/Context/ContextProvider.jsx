@@ -9,12 +9,14 @@ export default function ContextProvider({ children }) {
     const [carrito, setCarrito] = useState([]);
     const [totalDeProductos, setTotalDeProductos] = useState(0);
     const [totalDeDinero, setTotalDeDinero] = useState(0);
+    const [ordenCompra, setOrdenCompra] = useState([]);
+
     // AGREGAR AL CARRO 
     function addToCart(item) {
         const indexProducto = carrito.findIndex(producto => producto.id === item.id);
         if (indexProducto !== -1) {
             const newCarrito = [...carrito];
-            newCarrito[indexProducto].cantProduc = newCarrito[indexProducto].cantProduc + item.cantProduc;
+            newCarrito[indexProducto].cantProduc = newCarrito[indexProducto].cantProduc + 1;
             newCarrito[indexProducto].precioTotal = newCarrito[indexProducto].precio * newCarrito[indexProducto].cantProduc;
 
             setCarrito(newCarrito);
@@ -27,6 +29,20 @@ export default function ContextProvider({ children }) {
     function removeItem(itemId) {
         setCarrito(carrito.filter((item) => item.id !== itemId))
         console.log(itemId)
+    }
+    // SACAR UN SOLO PRODUCTO DEL CARRO
+    function removeOneItem(item) {
+        const indexProducto = carrito.findIndex(producto => producto.id === item.id);
+        if (indexProducto !== -1) {
+            const newCarrito = [...carrito];
+            newCarrito[indexProducto].cantProduc = newCarrito[indexProducto].cantProduc - 1;
+            newCarrito[indexProducto].precioTotal = newCarrito[indexProducto].precio * newCarrito[indexProducto].cantProduc;
+
+            setCarrito(newCarrito);
+        } else {
+            setCarrito([...carrito, item]);
+            // console.log(item)
+        }
     }
     // LIMPIAR CARRO
     function clear() {
@@ -51,7 +67,7 @@ export default function ContextProvider({ children }) {
     }, [carrito]);
 
     return (
-        <Context.Provider value={{ carrito, setCarrito, addToCart, removeItem, clear, totalDeProductos, totalDeDinero }}>
+        <Context.Provider value={{ carrito, setCarrito, addToCart, removeItem, clear, totalDeProductos, totalDeDinero, removeOneItem, ordenCompra, setOrdenCompra }}>
             {children}
         </Context.Provider>
     )

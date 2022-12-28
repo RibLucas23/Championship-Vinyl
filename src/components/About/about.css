@@ -1,0 +1,79 @@
+.about__title {
+    margin-top: 5rem;
+}
+
+.title-center {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.about__logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.about__text {
+    margin: 1rem 2rem;
+}
+
+.about__text p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+/* ____________________________________________________________________*/
+/* ############################ Tablet ############################### */
+/* ____________________________________________________________________*/
+@media (min-width:768px) and (max-width: 1023px) {
+    .about__title {
+        font-size: 1.5rem;
+    }
+
+    .about__logo__img {
+        width: 16rem;
+    }
+
+    .about__text p {
+        font-size: 1.1rem;
+    }
+
+    .about__logo__img__bottom {
+        width: 26rem;
+    }
+}
+
+/* ____________________________________________________________________*/
+/* ############################ Desktop ############################### */
+/* ____________________________________________________________________*/
+
+@media (min-width:1024px) {
+    .about__title {
+        margin-top: 10rem;
+        font-size: 2rem;
+    }
+
+    .about__logo__img {
+        width: 20rem;
+    }
+
+    .about__text p {
+        font-size: 1.3rem;
+    }
+
+    .about__logo__img__bottom {
+        width: 26rem;
+    }
+
+    .about__sidebar {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+}

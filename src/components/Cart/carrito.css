@@ -1,3 +1,16 @@
+.itemCarrito__desktop {
+    display: none;
+}
+
+.tabla__carrito {
+    display: none;
+}
+
+.cart__recomendados {
+    display: none;
+
+}
+
 .seguirComprando {
     display: flex;
     justify-content: center;
@@ -18,6 +31,7 @@
 
 .carritoEntero {
     margin: 17px;
+    min-height: 61vh;
 }
 
 /* ============ ITEM CARRITO   ============ */
@@ -29,6 +43,8 @@
 /* izquierda */
 .itemCarrito_titulos {
     margin: 26px 10px;
+    min-width: 27%;
+    max-width: 27%;
 }
 
 .itemCarrito_titulos h5 {
@@ -42,10 +58,15 @@
     justify-content: center;
     align-items: center;
     margin: 0 10px;
+    min-width: 27%;
+    max-width: 27%;
+
+
 }
 
 .itemCarrito_precio {
     color: #0A7A00;
+
 }
 
 .itemCarritoQuitar {
@@ -60,8 +81,369 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 27%;
+    max-width: 27%;
 }
 
 .itemCarrito_img {
     max-width: 120px;
+}
+
+
+/* ============ BOTONERA CARRITO   ============ */
+
+.botoneraCarrito {
+    /* display: flex; */
+}
+
+.totalDinero {
+    text-align: right;
+    padding-right: 5px;
+    margin: 20px 30px;
+    font-size: 1.5rem;
+}
+
+.carritoTotalDinero {
+    color: #0A7A00;
+}
+
+.carritoBtnComprar {
+    height: 3rem;
+    background: #56B280;
+    border-radius: 4px;
+    border: none;
+    padding: 8px 44px;
+    gap: 10px;
+    width: 100%;
+    color: white;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+
+
+/* ============ METODOS DE PAGO  ============ */
+
+.payMethods {
+    margin: 30px 17px;
+}
+
+.paymethods_tc_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.payMethods_tc {
+    width: 20vw;
+}
+
+.tablet__tc {
+    display: none;
+}
+
+.tc_container {
+    width: 100%;
+    display: flex;
+}
+
+.payMethods_select {
+    width: 20px;
+    height: 20px;
+    background-color: #FF890B;
+    border-radius: 50%;
+    border: 2px solid black;
+
+}
+
+.payMethods_btn {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: black solid 2px;
+}
+
+.payMethods_btn-selected {
+    background-color: #FF890B;
+}
+
+.tc_example {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+/* ============ FORMULARIO DE PAYMETHODS  ============ */
+.PM__form__container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#PM__form__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.PM__form__total {
+    border-top: rgba(0, 0, 0, 0.575) solid 2px;
+    padding: 8px 1rem;
+}
+
+.PM__form {
+    margin: 0 1rem;
+}
+
+.PM__form p {
+    margin: 0.5rem 0;
+}
+
+.PM__form__textField {
+    width: 100%;
+}
+
+.PM__form__vencimiento__container {
+    display: flex;
+}
+
+#PM__form__vencimiento {
+    margin-right: 0.5rem;
+}
+
+#PM__form__cvv {
+    margin-left: 0.5rem;
+}
+
+.carritoTotalDinero {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 26px;
+
+    letter-spacing: -0.9px;
+}
+
+.PM__tc__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.PM__tc {
+    position: relative;
+    width: 300px;
+    height: 199px;
+    background-image: url("../../imgs/metodos de pago/Visa.png");
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.PM__tc__nTarjeta {
+    position: absolute;
+    top: 110px;
+    left: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+}
+
+.PM__tc__nombre {
+    position: absolute;
+    top: 160px;
+    left: 20px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.PM__tc__fVencimiento {
+    position: absolute;
+    top: 160px;
+    left: 140px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+
+.PM__btn {
+    margin: 1rem
+}
+
+/* ============ COMPRA EXITOSA  ============ */
+.CE__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CE__container h3 {
+    margin: 6rem 0 0.5rem 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 29px;
+    color: #454444;
+}
+
+.CE__container p {
+    margin: 0.5rem 0;
+}
+
+.CE__codCompra {
+    color: #FF890B;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 20px;
+}
+
+.CE__ordCompra {
+    color: #1D293F;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 26px;
+}
+
+.CE__email {
+    width: 65%;
+    text-align: center;
+}
+
+/* ____________________________________________________________________*/
+/* ############################ Tablet ############################### */
+/* ____________________________________________________________________*/
+@media (min-width:768px) and (max-width: 1023px) {
+    .tablet__tc {
+        display: inline;
+    }
+
+    .paymethods_tc_container h4 {
+        font-size: 1.2rem;
+    }
+
+    .CE__email {
+        width: 50%;
+    }
+
+}
+
+/* ____________________________________________________________________*/
+/* ############################ Desktop ############################### */
+/* ____________________________________________________________________*/
+
+@media (min-width:1024px) {
+    .carritoEntero {
+        width: 75%;
+    }
+
+    .seguirComprando {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 20%;
+    }
+
+    .bordeTCrecomendados {
+        border-bottom: 6px solid #A54A49;
+    }
+
+    .cart__recomendados {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .tabla__product {
+        width: 50%;
+    }
+
+    .tabla__price {
+        width: 20%;
+    }
+
+    .tabla__quantity {
+        width: 20%;
+    }
+
+    .tabla__total {
+        width: 10%;
+    }
+
+    .tabla__carrito {
+        display: flex;
+        margin-left: 2rem;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        margin-top: 0.5rem;
+
+        /* justify-content: space-between; */
+    }
+
+    /* ============ ITEM CARRITO   ============ */
+    .itemCarrito__desktop {
+        margin: 10px 0;
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+        padding-right: 3rem;
+    }
+
+    .itemCarrito {
+        display: none;
+    }
+
+    .itemCarrito_derecha {
+        min-width: 50%;
+        justify-content: start;
+        margin-left: 1rem;
+    }
+
+    .itemCarrito_mid {
+        min-width: 20%;
+        align-items: flex-start;
+    }
+
+    .itemDetail_top h2 {
+        margin: 0;
+    }
+
+    /* ============ BOTONERA CARRITO   ============ */
+    .botonesCarrito {
+        display: flex;
+        justify-content: end;
+    }
+
+    .carritoBtnComprar {
+        width: 100%;
+    }
+
+    /* ============ METODOS DE PAGO  ============ */
+
+    .payMethods__wrapper {
+        display: flex;
+        margin: 25px 0
+    }
+
+    .payMethods {
+        width: 75%;
+        margin: 0 25px;
+    }
+
+    .PM__desktop__container {
+        display: flex;
+    }
+
+    .PM__desktop__form {
+        width: 75%;
+        margin-top: 4rem;
+    }
 }
