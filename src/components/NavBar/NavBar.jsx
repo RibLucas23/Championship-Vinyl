@@ -26,39 +26,42 @@ export default function NavBar() {
     return (
         <nav className='nav'>
             <div className='navArriba'>
-                <div>
+                {/* Menu movil */}
+                <div className='navMenu_mvl'>
+                    <MenuIcon className='navMenu_mvl_icon'
+                        onClick={() => {
+                            mostrar()
+                        }} />
+                    {!oculto ? (<NavBarMenu />) :
+                        (<>
+                        </>)}
+                    {/* <NavBarMenu /> */}
+                </div>
+
+                <div className='navMenu__wrapper'>
                     {/* Logos */}
-                    <img src={Disco} className='navDisco' alt="" />
+                    <img src={Disco} className='navDisco movil' alt="" />
                     <Link to='/'>
-                        <img className='navLogo' src={Logo} alt="" />
-                        {/* <img className='navLogo__desktop' src={logoDesktop} alt="" /> */}
+                        <img className='navLogo movil' src={Logo} alt="" />
+                    </Link>
+                    <Link className=' desktop' to='/'>
+                        <img className='navLogo__desktop' src={logoDesktop} alt="" />
                     </Link>
                     {/* Menu de navegación */}
                     {/* Menu desktop */}
-                    <div className='navMenu'>
-                        <ul>
-                            <Link to='/'>
-                                <li>HOME</li>
-                            </Link>
-                            <Link to='/about'>
-                                <li>ABOUT</li>
-                            </Link>
-                            <Link to='/contact'>
-                                <li>CONTACT US</li>
-                            </Link>
-                        </ul>
-                    </div>
-                    {/* Menu movil */}
-                    <div className='navMenu_mvl'>
-                        <MenuIcon className='navMenu_mvl_icon'
-                            onClick={() => {
-                                mostrar()
-                            }} />
-                        {!oculto ? (<NavBarMenu />) :
-                            (<>
-                            </>)}
-                        {/* <NavBarMenu /> */}
-                    </div>
+
+                    <ul className='navMenu desktop '>
+                        <Link className='link' to='/'>
+                            <li>HOME</li>
+                        </Link>
+                        <Link className='link' to='/about'>
+                            <li>ABOUT</li>
+                        </Link>
+                        <Link className='link' to='/contact'>
+                            <li>CONTACT US</li>
+                        </Link>
+                    </ul>
+
                 </div>
                 {/* Carrito */}
                 <div className='navCarrito'>

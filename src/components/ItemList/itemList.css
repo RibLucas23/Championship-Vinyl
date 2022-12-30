@@ -134,6 +134,7 @@
 
     .itemList__wrapper {
         display: flex;
+        margin-top: 3.5rem;
     }
 
     .itemList_wrapper {

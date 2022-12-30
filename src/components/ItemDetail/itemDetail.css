@@ -80,7 +80,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 27vh;
+    height: 16rem;
 }
 
 .itemDetail__tracklist p {
@@ -157,15 +157,17 @@
     }
 
     .item__img img {
-        width: 75%;
+        width: 95%;
+        object-fit: contain;
     }
 
     .item__img {
-        width: 40%;
+        width: 42%;
+        height: 500px;
     }
 
     .itemDetail__Container {
-        width: 50%;
+        width: 58%;
     }
 
     .itemDetail_btns_on {

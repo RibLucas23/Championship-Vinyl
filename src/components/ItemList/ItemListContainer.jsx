@@ -29,7 +29,7 @@ export default function ItemListContainer() {
     const [itemsColecciones, setItemsColecciones] = useState([])
     const [itemsRecomendados, setItemsRecomendados] = useState([])
     const [itemsTop5, setItemsTop5] = useState([]);
-    const [selected, setSelected] = useState(true)
+    const [selected, setSelected] = useState(false)
 
     useEffect(() => {
         setLoading(true)
@@ -127,7 +127,7 @@ export default function ItemListContainer() {
                             <SearchIcon />
                         </span>
                     </div>
-                    <div className='etiquetas'>
+                    <div className='etiquetas movil'>
 
                         {/* generos */}
                         <Link to='/s'>

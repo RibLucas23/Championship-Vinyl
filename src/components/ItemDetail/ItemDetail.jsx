@@ -75,10 +75,10 @@ export default function ItemDetail({ item }) {
                             </b>
                         </span>
                     </div>
-
+                    {/* 
                     <div className='item_imgs'>
 
-                    </div>
+                    </div> */}
 
                     {/* INFO DISCO  */}
                     <div className='itemDetailBox'>
