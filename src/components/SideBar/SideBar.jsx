@@ -23,9 +23,7 @@ export default function SideBar() {
 
                     </div>
                     <ul>
-                        <Link to='/genre/Flamenco' className='sideBar__links' >
-                            <li>Flamenco</li>
-                        </Link>
+
                         <Link to='/genre/Pop' className='sideBar__links'>
                             <li>Pop</li>
                         </Link>
@@ -38,34 +36,30 @@ export default function SideBar() {
                         <Link to='/genre/Rap' className='sideBar__links'>
                             <li>Rap</li>
                         </Link>
-
+                        <Link to='/genre/Folk' className='sideBar__links'>
+                            <li>Folk</li>
+                        </Link>
+                        <Link to='/genre/Jazz' className='sideBar__links'>
+                            <li>Jazz</li>
+                        </Link>
+                        <Link to='/genre/Experimental' className='sideBar__links'>
+                            <li>Experimental</li>
+                        </Link>
+                        <Link to='/genre/Alternative Rock' className='sideBar__links'>
+                            <li>Alternative Rock</li>
+                        </Link>
+                        <Link to='/genre/Punk' className='sideBar__links'>
+                            <li>Punk</li>
+                        </Link>
+                        <Link to='/genre/Reggaetón' className='sideBar__links'>
+                            <li>Reggaetón</li>
+                        </Link>
+                        <Link to='/genre/Electronica' className='sideBar__links'>
+                            <li>Electronica</li>
+                        </Link>
                     </ul>
                 </div>
-                <div className='collections'>
-                    <div className='sideBar_Border'>
-                        <div className='sideBar_separador'>
-                        </div>
-                        <div className='sideBar__Title'>
-                            <h3>Collections</h3>
-                            <img src={Disco} className="sideBar__discoImg" alt="" />
-                        </div>
 
-                    </div>
-                    <ul>
-                        <Link to='/collection/The Beatles' className='sideBar__links' >
-                            <li>The Beatles</li>
-                        </Link>
-                        <Link to='/collection/Rosalia' className='sideBar__links'>
-                            <li>Rosalia</li>
-                        </Link>
-                        <li> The Beatles</li>
-                        <li> The Rolling Stones</li>
-                        <li> The Who</li>
-                        <li> Led Zeppelin</li>
-                        <li> The Doors</li>
-                    </ul>
-
-                </div>
             </div>
 
         </>

@@ -20,7 +20,7 @@ import './carrito.css'
 
 export default function PayMethods() {
     let { carrito } = useContext(Context)
-    const [selectPayMethod, setSelectPayMethod] = useState();
+    const [selectPayMethod, setSelectPayMethod] = useState("visa");
 
     //use Navigate
     const navigate = useNavigate()

@@ -38,5 +38,6 @@
 
     .contact__wrapper {
         display: flex;
+        min-height: 74vh;
     }
 }
