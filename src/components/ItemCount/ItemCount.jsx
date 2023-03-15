@@ -61,26 +61,6 @@ export default function ItemCount({ onAdd, item, carrito }) {
             </div>
 
 
-            {/* <div className="itemCount__precio">
-                    <h2>${item.precio}</h2>
-
-                </div> */}
-
-            {/* <div className='itemCount__comprar'>
-                    <button className="itemCount__comprar__btn"
-                        onClick={() => {
-                            addToCart({ ...item, cantProduc })
-                            onAdd(cantProduc)
-                            console.log(carrito)
-                        }}>
-                        < ShoppingCartOutlinedIcon />
-                        <h2>
-                            + Add to cart
-                        </h2>
-                    </button>
-
-                </div> */}
-
         </>
     )
 }

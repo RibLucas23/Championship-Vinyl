@@ -55,10 +55,10 @@ export default function NavBar() {
                             <li>HOME</li>
                         </Link>
                         <Link className='link' to='/about'>
-                            <li>ABOUT</li>
+                            <li>NOSOTROS</li>
                         </Link>
                         <Link className='link' to='/contact'>
-                            <li>CONTACT US</li>
+                            <li>CONTÁCTANOS</li>
                         </Link>
                     </ul>
 

@@ -17,7 +17,7 @@ export default function SideBar() {
                         </div>
 
                         <div className='sideBar__Title'>
-                            <h3>Genres</h3>
+                            <h3>Géneros</h3>
                             <img src={Disco} className="sideBar__discoImg" alt="" />
                         </div>
 
