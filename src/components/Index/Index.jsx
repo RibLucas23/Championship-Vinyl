@@ -11,7 +11,7 @@ export default function Index() {
     return (
         <>
 
-            <main>
+            <main className='main'>
 
                 <ItemListContainer />
 

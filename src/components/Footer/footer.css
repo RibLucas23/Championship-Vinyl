@@ -1,34 +1,35 @@
 .footer {
-    display: none
+	display: flex;
+	background-color: black;
+	padding: 10px;
+}
+.logo {
+	width: 150px;
+}
+.footer__txts {
+	color: white;
 }
 
+.footer__txts ul li {
+	list-style: none;
+}
+
+.footer__txts__seccs {
+	display: flex;
+	justify-content: space-between;
+}
 /* ____________________________________________________________________*/
 /* ############################ Tablet ############################### */
 /* ____________________________________________________________________*/
-@media (min-width:768px) {
+@media (min-width: 768px) {
+	.footer {
+		margin-top: 3rem;
+		display: block;
+		background-color: black;
+	}
 
-    .footer {
-        margin-top: 3rem;
-        display: block;
-        background-color: black;
-    }
-
-    .logo {
-        margin: 0 0 20px 55px;
-        width: 150px;
-    }
-
-    .footer__txts {
-        color: white;
-
-    }
-
-    .footer__txts ul li {
-        list-style: none;
-    }
-
-    .footer__txts__seccs {
-        display: flex;
-        justify-content: space-between;
-    }
+	.logo {
+		margin: 0 0 20px 55px;
+		width: 150px;
+	}
 }

@@ -1,178 +1,181 @@
 .nav {
-    position: sticky;
-    top: 0;
-    z-index: 10;
+	position: sticky;
+	top: 0;
+	z-index: 10;
 }
 
 .navArriba {
-    display: flex;
-    height: 70px;
-    background-color: #8A8C41;
-    justify-content: space-between;
-    box-shadow: 0px 4px 4px 0px #00000040;
-    position: relative;
+	display: flex;
+	height: 70px;
+	background-color: #8a8c41;
+	justify-content: space-between;
+	box-shadow: 0px 4px 4px 0px #00000040;
+	position: relative;
+	width: 100vw;
 }
 
 /* logos  */
 .navDisco {
-    /* position: absolute; */
-    width: 227px;
-    height: 85px;
-    right: 25%;
-    top: 0;
-    z-index: 4;
+	/* position: absolute; */
+	width: 227px;
+	height: 85px;
+	right: 25%;
+	top: 0;
+	z-index: 4;
 }
 
 .navLogo {
-    width: 114px;
-    right: 26%;
-    top: 0.7rem;
-    position: absolute;
-    z-index: 4;
-
+	width: 114px;
+	right: 26%;
+	top: 0.7rem;
+	position: absolute;
+	z-index: 4;
 }
 
 /* menu */
 .desktop {
-    display: none;
+	display: none;
 }
 
 .navMenu__wrapper {
-    display: flex;
-    position: relative;
+	display: flex;
+	position: relative;
 }
 
 .navLogo__desktop {
-    width: 400px;
+	width: 400px;
 }
 
 /* menu movil */
 
 .navMenu__container {
-    /* display: none; */
-    position: fixed;
-    background-color: white;
-    top: 70px;
-    z-index: 3;
-    width: 70vw;
-    height: 100%;
-    transition: all 1s;
+	/* display: none; */
+	position: fixed;
+	background-color: white;
+	top: 70px;
+	z-index: 3;
+	width: 70vw;
+	height: 100%;
+	transition: all 1s;
 }
 
 .navMenu_mvl {
-    align-items: center;
-    display: flex;
+	align-items: center;
+	display: flex;
 }
 
 .navMenu_mvl_icon {
-    font-size: 44px !important;
-    color: white;
-    margin-left: 18px;
-    cursor: pointer;
+	font-size: 44px !important;
+	color: white;
+	margin-left: 18px;
+	cursor: pointer;
 }
 
 .navMenu_Mvl ul li {
-    display: flex;
-    margin: 1rem;
-    color: black;
+	display: flex;
+	margin: 1rem;
+	color: black;
 }
 
 .navMenu_mvl_icons {
-    margin-right: 1rem;
+	margin-right: 1rem;
 }
 
 /* carrito  */
 .navCarrito {
-    display: flex;
-    align-items: center;
-    margin-right: 33px;
+	display: flex;
+	align-items: center;
+	margin-right: 33px;
 }
 
 .link {
-    color: white;
-    text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 
 .cart {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .cart svg {
-    font-size: 2rem;
+	font-size: 2rem;
 }
 
 /* ____________________________________________________________________*/
 /* ############################ Tablet ############################### */
 /* ____________________________________________________________________*/
-@media (min-width:768px) and (max-width: 1023px) {
-    .navDisco {
-        width: 302px;
-        height: 112px;
-    }
+@media (min-width: 768px) and (max-width: 1023px) {
+	.navDisco {
+		width: 302px;
+		height: 112px;
+	}
 
-    .navLogo {
-        width: 144px;
-    }
+	.navLogo {
+		width: 144px;
+	}
 
-    .cart {
-        font-size: 1.2rem;
-    }
+	.cart {
+		font-size: 1.2rem;
+	}
 
-    .cart svg {
-        font-size: 2.5rem;
-    }
+	.cart svg {
+		font-size: 2.5rem;
+	}
 
-    .div_buscador {
-        margin: 48px 32px 16px;
-    }
+	.div_buscador {
+		margin: 48px 32px 16px;
+	}
 }
 
 /* ____________________________________________________________________*/
 /* ############################ Desktop ############################### */
 /* ____________________________________________________________________*/
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
+	/* menu movil */
+	.navMenu_mvl {
+		display: none;
+	}
 
-    /* menu movil */
-    .navMenu_mvl {
-        display: none;
-    }
+	.navArriba {
+		align-items: inherit;
+		height: 115px;
+		display: flex;
+		flex-direction: row-reverse;
+	}
 
-    .navArriba {
-        align-items: inherit;
-        height: 115px;
-    }
+	.navLogo__desktop {
+		width: 712px;
+	}
 
-    .navLogo__desktop {
-        width: 712px;
-    }
+	.navMenu {
+		display: flex !important;
+		position: relative;
+		list-style: none;
+		right: 50%;
+		height: 40px;
+	}
 
+	.navMenu li {
+		margin: 15px 15px;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 22px;
+	}
 
-    .navMenu {
-        display: flex !important;
-        position: relative;
-        list-style: none;
-        right: 50%;
-        height: 40px;
-    }
+	.navMenu__wrapper {
+		position: absolute;
+	}
 
-    .navMenu li {
-        margin: 15px 15px;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 22px;
-    }
+	.cart {
+		font-size: 1.6rem;
+	}
 
-    .navMenu__wrapper {
-        left: 25%;
-    }
-
-    .cart {
-        font-size: 1.6rem;
-    }
-
-    .cart svg {
-        font-size: 2.5rem;
-    }
+	.cart svg {
+		font-size: 2.5rem;
+	}
+	.navCarrito {
+		/* position: ; */
+	}
 }
